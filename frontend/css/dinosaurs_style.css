@@ -1,0 +1,146 @@
+/* ==================================== */
+/* DINOSAUR STYLES (dinosaurs_style.css) */
+/* ==================================== */
+
+/* --- GLOBAL & BACKGROUND STYLES (Preserved) --- */
+
+body 
+{ 
+    font-family: Arial, sans-serif; 
+    background-color: #f0f8ff; 
+    margin: 0; 
+    padding: 0; 
+    background-image: url('../static/background_login.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-attachment: fixed; 
+    position: relative; 
+}
+body::before 
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); 
+    z-index: -1; 
+}
+
+/* --- HEADER & NAVIGATION STYLES (Preserved) --- */
+
+header 
+{ 
+    background-color: #333; 
+    color: white; 
+    padding: 15px 30px; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    position: relative; 
+    z-index: 2; 
+}
+header h1 
+{ 
+    margin: 0; 
+    font-size: 1.5em; 
+}
+nav a 
+{ 
+    color: white; 
+    text-decoration: none; 
+    padding: 10px 15px; 
+    border-radius: 5px; 
+    transition: background-color 0.3s; 
+}
+nav a:hover, nav a.active 
+{ 
+    background-color: #575757; 
+}
+
+/* --- MAIN CONTENT & TYPOGRAPHY (Adjusted for Readability) --- */
+
+.main-content 
+{ 
+    padding: 40px; 
+    position: relative;
+    z-index: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h2 
+{ 
+    color: #008080; /* Teal color for Dinosaurs */
+    border-bottom: 2px solid #008080; 
+    padding-bottom: 10px; 
+    color: #fff; /* White text for contrast */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+.intro-text {
+    color: #fff;
+    font-size: 1.1em;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+/* --- FILTER BAR STYLES (New) --- */
+
+.filter-bar {
+    background-color: rgba(255, 255, 255, 0.95); /* Semi-transparent white background */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* --- DINOSAUR CARD STYLES (Replacing old list styles) --- */
+
+.dino-grid {
+    margin-top: 30px;
+}
+
+.dino-card {
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    height: 100%; /* Ensures all cards in a row are the same height */
+    position: relative; /* Needed for stretched-link */
+}
+
+.dino-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card-img-top {
+    height: 150px;
+    object-fit: cover;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.card-title a {
+    text-decoration: none;
+    color: #008080; /* Teal link color */
+    font-weight: bold;
+}
+
+.card-text {
+    margin-bottom: 5px;
+}
+
+/* --- REMOVING REDUNDANT STYLES --- */
+/* These styles are no longer needed as the list structure is replaced by cards */
+.dino-list { 
+    display: none; /* Hide the old UL list */
+}
+.dino-item { 
+    display: none; /* Hide the old LI items */
+}
+.filter-status { /* No longer using this specific class name */
+    display: none; 
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prehistoric Eras - Dino-Explorer</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="../css/eras-style.css">
+</head>
+<body>
+    <header>
+        <h1>Dino-Explorer</h1>
+        <nav>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="dinosaurs.html">Dinosaurs</a>
+            <a href="eras.html" class="active">Eras</a>
+            <a href="locations.html">Locations</a>
+            <a href="researchers.html">Researchers</a>
+            <a href="profile.html">Profile</a>
+            <a href="login.html">Log Out</a> 
+        </nav>
+    </header>
+    
+    <div class="main-content">
+        <h2>The Mesozoic Era (The Age of Reptiles)</h2>
+        <p class="intro-text">
+            Spanning over 186 million years, the Mesozoic Era is divided into three distinct periods—Triassic, Jurassic, and Cretaceous—each with unique flora, fauna, and geological events. Explore the dynamic epochs where dinosaurs reigned supreme!
+        </p>
+
+        <div class="row">
+            
+            <div class="col-md-4 mb-4">
+                <div class="era-card card text-center">
+                    <img src="../static/era_cretaceous.avif" class="card-img-top" alt="Cretaceous Period Scene">
+                    <div class="card-body">
+                        <h3 class="card-title">Cretaceous Period <span class="badge bg-danger">Latest</span></h3>
+                        <p class="card-text text-muted">(145 to 66 million years ago)</p>
+                        <p class="card-text">
+                            Home to the **T. rex** and **Triceratops**. This period saw the rise of flowering plants and ended tragically with the K-Pg mass extinction event, wiping out the non-avian dinosaurs.
+                        </p>
+                        <a href="dinosaurs.html?era=Cretaceous" class="btn btn-primary w-100">View Cretaceous Dinosaurs &rarr;</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="era-card card text-center">
+                    <img src="../static/era_jurassic.avif" class="card-img-top" alt="Jurassic Period Scene">
+                    <div class="card-body">
+                        <h3 class="card-title">Jurassic Period <span class="badge bg-warning text-dark">Middle</span></h3>
+                        <p class="card-text text-muted">(201 to 145 million years ago)</p>
+                        <p class="card-text">
+                            Known for the giant sauropods like **Brachiosaurus** and the apex predator **Allosaurus**. Conifers and ferns dominated the landscape, and the first birds appeared.
+                        </p>
+                        <a href="dinosaurs.html?era=Jurassic" class="btn btn-primary w-100">View Jurassic Dinosaurs &rarr;</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="era-card card text-center">
+                    <img src="../static/era_triassic.jpg" class="card-img-top" alt="Triassic Period Scene">
+                    <div class="card-body">
+                        <h3 class="card-title">Triassic Period <span class="badge bg-info">Earliest</span></h3>
+                        <p class="card-text text-muted">(252 to 201 million years ago)</p>
+                        <p class="card-text">
+                            The dawn of the dinosaurs. Early forms like *Coelophysis* began to spread after the devastating Permian-Triassic extinction, marking the start of the Age of Reptiles.
+                        </p>
+                        <a href="dinosaurs.html?era=Triassic" class="btn btn-primary w-100">View Triassic Dinosaurs &rarr;</a>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+</body>
+</html>
