@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Profile - Dino-Explorer</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
+    <link rel="stylesheet" href="../css/profil_style.css">
+</head>
+<body>
+    <header>
+        <h1>Dino-Explorer</h1>
+        <nav>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="dinosaurs.html">Dinosaurs</a>
+            <a href="eras.html">Eras</a>
+            <a href="locations.html">Locations</a>
+            <a href="researchers.html">Researchers</a>
+            <a href="profile.html" class="active">Profile</a>
+            <a href="login.html">Log Out</a> 
+        </nav>
+    </header>
+    
+    <div class="main-content">
+        <h2 class="text-center">Your Dino-Explorer Profile</h2> 
+        <p class="intro-text text-center">
+            Welcome to your personal fossil hub! Manage your account details and review your favorite prehistoric finds below.
+        </p>
+
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                
+                <div class="profile-card card shadow-lg p-4">
+                    <div class="row">
+                        
+                        <div class="col-md-5 text-center border-end">
+                            <img src="../static/dino_avatar.png" alt="Profile Avatar" class="profile-avatar mb-3">
+                            <h3 class="card-title text-primary">DinoHunter99</h3>
+                            
+                            <div class="account-details text-start mx-auto mt-4">
+                                <p><i class="fas fa-envelope fa-fw me-2"></i> <strong>Email:</strong> user@example.com</p>
+                                <p><i class="fas fa-calendar-alt fa-fw me-2"></i> <strong>Member Since:</strong> Oct 2025</p>
+                                <p><i class="fas fa-layer-group fa-fw me-2"></i> <strong>Explored Eras:</strong> 3/3</p>
+                            </div>
+                            
+                            <button class="btn btn-warning mt-3 w-75" data-bs-toggle="modal" data-bs-target="#editProfileModal">
+                                <i class="fas fa-edit me-2"></i> Edit Settings
+                            </button>
+                        </div>
+
+                        <div class="col-md-7">
+                            <div class="saved-dinos h-100">
+                                <h3 class="card-title border-bottom pb-2">Your Saved Dinosaurs <i class="fas fa-bookmark ms-2"></i></h3>
+                                <p class="text-muted">Keep track of your favorites!</p>
+                                
+                                <ul class="list-group list-group-flush mt-3">
+                                    <li class="list-group-item">
+                                        <a href="dino-details.html?id=1"><i class="fas fa-skull me-2 text-danger"></i> Tyrannosaurus rex</a>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <a href="dino-details.html?id=5"><i class="fas fa-tree me-2 text-success"></i> Brachiosaurus</a>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <a href="dino-details.html?id=8"><i class="fas fa-shield-alt me-2 text-secondary"></i> Ankylosaurus</a>
+                                    </li>
+                                    <li class="list-group-item text-center">
+                                        <a href="dinosaurs.html" class="btn btn-sm btn-outline-primary mt-2">Browse All Dinosaurs</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    
+    <div class="modal fade" id="editProfileModal" tabindex="-1" aria-labelledby="editProfileModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="editProfileModalLabel"><i class="fas fa-user-edit me-2 text-warning"></i> Edit Account Settings</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="newUsername" class="form-label">New Username</label>
+                            <input type="text" class="form-control" id="newUsername" value="DinoHunter99" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="currentEmail" class="form-label">Email (Cannot be changed here)</label>
+                            <input type="email" class="form-control" id="currentEmail" value="user@example.com" disabled>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="submit" class="btn btn-warning">Save Changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+</body>
+</html>

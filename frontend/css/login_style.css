@@ -1,0 +1,78 @@
+body 
+{ 
+    font-family: Arial, sans-serif; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh; 
+    margin: 0; 
+    background-image: url('../static/background_login.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-attachment: fixed; 
+    position: relative; /* Needed for the ::before overlay */
+}
+body::before 
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* 40% black overlay */
+    z-index: -1; /* Place overlay behind the content */
+}
+
+.container 
+{ 
+    background-color: rgba(255, 255, 255, 0.95); /* Slightly transparent white for a modern look */
+    padding: 40px; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Stronger shadow */
+    width: 300px; 
+    z-index: 10; /* Ensure container is above the background/overlay */
+}
+
+h2 
+{ 
+    text-align: center; 
+    color: #1e88e5; 
+}
+label 
+{ 
+    display: block; 
+    margin-top: 15px; 
+    font-weight: bold; 
+}
+input[type="email"], input[type="password"] 
+{ 
+    width: 100%; 
+    padding: 10px; 
+    margin-top: 5px; 
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+    box-sizing: border-box; 
+}
+.login-btn { 
+    width: 100%; 
+    padding: 10px; 
+    background-color: #4CAF50; 
+    color: white; 
+    border: none; 
+    border-radius: 4px; 
+    cursor: pointer; 
+    margin-top: 20px; 
+}
+.login-btn:hover { 
+    background-color: #45a049; 
+}
+.link-text { 
+    text-align: center; 
+    margin-top: 15px; 
+    font-size: 0.9em; 
+}
+.link-text a { 
+    color: #1e88e5; 
+    text-decoration: none; 
+}
