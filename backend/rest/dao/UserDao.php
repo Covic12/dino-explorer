@@ -10,13 +10,20 @@ class UserDao extends BaseDao {
         parent::__construct($this->table_name);
     }
 
-    // 🔹 Custom function not in BaseDao
     public function getUserByEmail($email)
     {
         $stmt = $this->connection->prepare("SELECT * FROM " . $this->table_name . " WHERE email = :email");
         $stmt->bindParam(':email', $email);
         $stmt->execute();
         return $stmt->fetch(); 
+    }
+
+    public function getUserByUsername($username)
+    {
+        $stmt = $this->connection->prepare("SELECT * FROM " . $this->table_name . " WHERE username = :username");
+        $stmt->bindParam(':username', $username);
+        $stmt->execute();
+        return $stmt->fetch();
     }
 }
 ?>
